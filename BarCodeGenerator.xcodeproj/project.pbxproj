@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		1785191B25E4C51B00B7B5D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1785191925E4C51B00B7B5D0 /* Main.storyboard */; };
 		1785191D25E4C51D00B7B5D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1785191C25E4C51D00B7B5D0 /* Assets.xcassets */; };
 		1785192025E4C51D00B7B5D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1785191E25E4C51D00B7B5D0 /* LaunchScreen.storyboard */; };
+		C3C11DA02811FE280022C6AC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C3C11D9F2811FE280022C6AC /* Realm */; };
+		C3C11DA22811FE280022C6AC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3C11DA12811FE280022C6AC /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C11DA22811FE280022C6AC /* RealmSwift in Frameworks */,
+				C3C11DA02811FE280022C6AC /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +99,10 @@
 			dependencies = (
 			);
 			name = BarCodeGenerator;
+			packageProductDependencies = (
+				C3C11D9F2811FE280022C6AC /* Realm */,
+				C3C11DA12811FE280022C6AC /* RealmSwift */,
+			);
 			productName = BarCodeGenerator;
 			productReference = 1785191025E4C51B00B7B5D0 /* BarCodeGenerator.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 1785190725E4C51B00B7B5D0;
+			packageReferences = (
+				C3C11D9E2811FE280022C6AC /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 1785191125E4C51B00B7B5D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -357,6 +368,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3C11D9E2811FE280022C6AC /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3C11D9F2811FE280022C6AC /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3C11D9E2811FE280022C6AC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		C3C11DA12811FE280022C6AC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3C11D9E2811FE280022C6AC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		170C57CA2810BCB400EBB33E /* QRCodeModel.xcdatamodeld */ = {
